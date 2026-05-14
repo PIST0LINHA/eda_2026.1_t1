@@ -23,7 +23,7 @@ int minha_hash(char *chave)
   while(*chave)
   {
     indice = indice * primo + *chave;
-    indice ^= indice >> 3;
+    indice ^= indice >> 7;
     chave++;
   }
   return indice % TAMANHO_TABELA;
